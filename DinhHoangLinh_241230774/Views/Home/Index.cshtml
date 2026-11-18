@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model List<Sach>
+<div class="banner"><img src="~/images/banner.jpg"/></div>
+<div class="section-head">
+    <h3 id="section-title">Đinh Hoàng Linh</h3>
+</div>
+<div>
+    @await Html.PartialAsync("_DinhHoangLinh_DanhSachSach",Model)
+</div>

@@ -1,0 +1,24 @@
+﻿@model Sach
+@{
+    ViewData["Title"] = "Them sach";
+}
+<h3>Thêm sách mới</h3>
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="MaTl">Thể loại</label>
+        <select asp-for="MaTl" asp-items="(SelectList)ViewBag.DsTheLoai"></select>
+    </div>
+      <div>
+        <label asp-for="TenSach">Tên sách</label>
+        <input asp-for="TenSach"/>
+    </div>  
+    <div>
+        <label asp-for="Gia">Giá (nghìn đồng )</label>
+        <input asp-for="Gia"/>
+
+    </div>  <div>
+        <label asp-for="Anh">Tên ảnh</label>
+        <input asp-for="Anh"/>
+    </div>
+    <button type="submit">Create</button>
+</form>

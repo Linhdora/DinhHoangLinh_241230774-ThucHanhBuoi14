@@ -1,0 +1,11 @@
+﻿@model List<Sach>
+<div class="grid">
+@foreach( var s in Model)
+{
+                <div class="book-card">
+                    <a href="#"><img src="images/@s.Anh" alt="" /></a>
+                    <h2>@s.TenSach</h2>
+                    <div class="book-foot"><span class="price">@s.Gia?.ToString("0")</span><button class="btn-buy">Thêm vào giỏ</button></div>
+                        </div>
+}
+</div>
